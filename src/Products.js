@@ -1,0 +1,336 @@
+const products = [
+  {
+    id: 1,
+    name: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    price: 1095,
+    reviews: [],
+    countInStock: 4,
+    description:
+      "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    category: "fashion",
+    image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    rating: 4,
+  },
+  {
+    id: 2,
+    countInStock: 9,
+    name: "Mens Casual Premium Slim Fit T-Shirts ",
+    price: 750,
+    reviews: [],
+    description:
+      "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
+    category: "fashion",
+    image:
+      "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+    rating: 3,
+  },
+  {
+    id: 3,
+    reviews: [],
+    countInStock: 9,
+    name: "Mens Cotton Jacket",
+    price: 3599,
+    description:
+      "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
+    category: "fashion",
+    image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+    rating: 5,
+  },
+  {
+    id: 4,
+    reviews: [],
+    name: "Mens Casual Slim Fit",
+    price: 1599,
+    countInStock: 5,
+    description:
+      "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+    category: "fashion",
+    image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+    rating: 2.5,
+  },
+  {
+    id: 5,
+    reviews: [],
+    name: "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+    price: 999,
+    countInStock: 13,
+    description:
+      "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+    category: "jewelery",
+    image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+    rating: 4.5,
+  },
+  {
+    id: 6,
+    reviews: [],
+    name: "Solid Gold Petite Micropave ",
+    price: 1680,
+    countInStock: 10,
+    description:
+      "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
+    category: "jewelery",
+    image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+    rating: 3.9,
+  },
+  {
+    id: 7,
+    reviews: [],
+    name: "White Gold Plated Princess Ring For Women",
+    price: 999,
+    countInStock: 5,
+    description:
+      "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
+    category: "jewelery",
+    image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+    rating: 4,
+  },
+  {
+    id: 8,
+    reviews: [],
+    name: "Pierced Owl Rose Gold Plated Stainless Steel Double",
+    price: 1099,
+    countInStock: 3,
+    description:
+      "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
+    category: "jewelery",
+    image: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+    rating: 1.9,
+  },
+  {
+    id: 9,
+    reviews: [],
+    name: "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
+    price: 6400,
+    countInStock: 6,
+    description:
+      "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
+    category: "electronics",
+    image: "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+    rating: 3.9,
+  },
+  {
+    id: 10,
+    reviews: [],
+    name: "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
+    price: 109,
+    countInStock: 15,
+    description:
+      "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
+    category: "electronics",
+    image: "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+    rating: 2.9,
+  },
+  {
+    id: 11,
+    reviews: [],
+    name: "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
+    price: 1099,
+    countInStock: 4,
+    description:
+      "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
+    category: "electronics",
+    image: "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+    rating: 4.9,
+  },
+  {
+    id: 12,
+    reviews: [],
+    name: "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
+    price: 11400,
+    countInStock: 5,
+    description:
+      "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
+    category: "electronics",
+    image: "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
+    rating: 4.8,
+  },
+  {
+    id: 13,
+    reviews: [],
+    name: "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
+    price: 5990,
+    countInStock: 7,
+    description:
+      "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz",
+    category: "electronics",
+    image: "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
+    rating: 2.9,
+  },
+  {
+    id: 14,
+    reviews: [],
+    name: "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
+    price: 99999,
+    countInStock: 4,
+    description:
+      "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag",
+    category: "electronics",
+    image: "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
+    rating: 2.2,
+  },
+  {
+    id: 15,
+    reviews: [],
+    name: "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
+    price: 5699,
+    countInStock: 16,
+    description:
+      "Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates",
+    category: "fashion",
+    image: "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
+    rating: 2.6,
+  },
+  {
+    id: 16,
+    reviews: [],
+    name: "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
+    price: 2995,
+    countInStock: 15,
+    description:
+      "100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON",
+    category: "fashion",
+    image: "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
+    rating: 2.9,
+  },
+  {
+    id: 17,
+    reviews: [],
+    countInStock: 15,
+    name: "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
+    price: 3999,
+    description:
+      "Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.",
+    category: "fashion",
+    image: "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
+    rating: 3.8,
+  },
+  {
+    id: 18,
+    reviews: [],
+    countInStock: 11,
+    name: "MBJ Women's Solid Short Sleeve Boat Neck V ",
+    price: 850,
+    description:
+      "95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem",
+    category: "fashion",
+    image: "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
+    rating: 4.7,
+  },
+  {
+    id: 19,
+    reviews: [],
+    countInStock: 14,
+    name: "Opna Women's Short Sleeve Moisture",
+    price: 795,
+    description:
+      "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort",
+    category: "fashion",
+    image: "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
+    rating: 4.5,
+  },
+  {
+    id: 20,
+    reviews: [],
+    countInStock: 13,
+    name: "DANVOUY Womens T Shirt Casual Cotton Short",
+    price: 1299,
+    description:
+      "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+    category: "fashion",
+    image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
+    rating: 3.6,
+  },
+  {
+    id: 21,
+    rating: 5,
+    reviews: [],
+    price: 1200,
+    countInStock: 4,
+    name: "ZEBRONICS Zeb-Yoga 101 Bluetooth Headset  (Red, In the Ear)",
+    category: "electronics",
+    image:
+      "https://rukminim1.flixcart.com/image/416/416/khp664w0-0/headphone/p/d/k/zeb-yoga-101-zebronics-original-imafxnkdwzt4gzhg.jpeg?q=70",
+    description:
+      " Model Name Zeb-Yoga 101 Color Red Headphone Type In the Ear Inline Remote Yes Sales Package 1 Headphone, 2 Pair of Earbuds, 2 Pair of Earhooks, Charging Cable, User Manual Connectivity Bluetooth Headphone Design Behind the Neck Product Details Sweat Proof No Foldable/Collapsible Yes Deep Bass Yes Water Resistant No Monaural No Controls Volume Control, Magnetic Switch Control Other Features Magnetic Earpiece, Voice Assistance Support With Microphone Yes Sound Features Impedance 32 Ohms Connectivity Features Bluetooth Version 4.2 Battery Life 7 hrs Charging Time 2 Play Time 7 hrs Standby Time 100 hrs Dimensions Weight 19 g Warranty Domestic Warranty 1 Year Warranty Summary 1 Year Carry into Service Centre Warranty Warranty Service Type Carry-in to Service Centre or Call our Customer Care - 9360942527 Covered in Warranty Manufacturing Defects Not Covered in Warranty Any Physical Damage and Accessories",
+  },
+  {
+    id: 22,
+    rating: 5,
+    reviews: [],
+    price: 15000,
+    countInStock: 1,
+    name: "Samsung Galaxy M51 (Electric Blue, 6GB RAM, 128GB Storage)",
+    category: "mobiles",
+    image:
+      "https://images.samsung.com/is/image/samsung/in-galaxy-m51-m515fz-8gb-sm-m515fzbeins--304622793?$684_547_PNG$",
+    description:
+      "Quad camera setup - 64MP (F1.8) main camera + 12MP (F2.2) ultra wide camera + 5MP (F2.4) depth camera + 5MP (F2.4) macro camera and 32MP (F2.2) front camera 16.95 cm (6.7-inch) sAMOLED Plus - Infinity-O display, FHD+ capacitive touchscreen with 1080 x 2400 pixels resolution, Contrast Ratio: 78960:1 Memory, Storage & SIM: 6GB RAM, 128GB internal memory expandable up to 512GB | Dedicated Memory slot Android v10.0 operating system with 2.2GHz+1.8GHz Qualcomm | SD730G octa core processor",
+  },
+  {
+    id: 23,
+    rating: 4.25,
+    reviews: [],
+    price: 48000,
+    countInStock: 5,
+    name: "New Inspiron 15 5509 Laptop",
+    category: "electronics",
+    image:
+      "https://i.dell.com/is/image/DellContent//content/dam/global-asset-library/Products/Notebooks/Inspiron/15_5508_non-touch/in5508nt_cnb_00055lf110_gr.psd?fmt=pjpg&pscan=auto&scl=1&hei=402&wid=668&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0&size=668,402",
+    description:
+      "11th Generation Intel® Core™ i3-1115G4 Processor (6MB Cache, up to 4.1 GHz)  laptop Windows 10 Home Single Language, English  videocard Intel® UHD Graphics with shared graphics memory  memory 8GB, 1x8GB, DDR4, 3200MHz  harddrive 512GB M.2 PCIe NVMe Solid State Drive  color Pebble (Top cover is Pebble color, Base and Palmrest are Black color)",
+  },
+  {
+    id: 24,
+    rating: 4.5,
+    reviews: [],
+    price: 4800,
+    countInStock: 5,
+    name: "Pure Cotton Men’s Checked Shirt By NoLogo",
+    category: "fashion",
+    image:
+      "https://static.cilory.com/450690-thickbox_default/nologo-navy-casual-shirt.jpg",
+    description:
+      "Product Code 87781 Sleeves Full Sleeves Pattern Checks Neck Collar Fit Slim Fabric 100% Cotton Country of Origin India Color Navy Category Shirts",
+  },
+  {
+    id: 25,
+    rating: 5,
+    reviews: [],
+    price: 800,
+    countInStock: 7,
+    name: "Logitech M170 Wireless Mouse, Black",
+    category: "electronics",
+    image:
+      "https://www.reliancedigital.in/medias/Logitech-WIRELESS-MOUSE-M170-491276865-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxNDI0NTd8aW1hZ2UvanBlZ3xpbWFnZXMvaGE5L2hiNi85MjAwNjI5NTc5ODA2LmpwZ3xiNjA3ZTI3MDJjYzBmZWEwY2IzNzY0MTAyZTU1MjM3ZTE5ZTc3MzhlNTZhN2ZkOTFjMmNhNmY0MDVmY2FhNTU2",
+    description:
+      "2.4 GHz Wireless connection Shape of the mouse supports hand for comfortable use Wireless range of up to 33 feet",
+  },
+  {
+    id: 26,
+    rating: 5,
+    reviews: [],
+    price: 76000,
+    countInStock: 6,
+    name: "Apple iPhone XR 128 GB, Blue (Includes Earpods and Adapter)",
+    category: "mobiles",
+    image:
+      "https://www.reliancedigital.in/medias/Apple-iPhone-XR-128GB-Blue-491488452-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w4NzY3NnxpbWFnZS9qcGVnfGltYWdlcy9oODMvaGIwLzkwNTE3MzU1NTYxMjYuanBnfDU4ZTdiOTljNWNhMjA0MDgyZjEyYzkxYzZkZmIzMGE2MTQ1MzVlNDAzOTc5ZjgwMmYyODNhYjhjNzM5ODg5ZDA",
+    description:
+      "ColourBlue Sub-brandiPhone ModelXR BrandApple Phone Hardware & Storage Internal Storage128 GB ProcessorA12 Bionic Chip Phone Build & Convenience Height15.09 cms Width7.57 cms Thickness0.83 cms Weight194 grams Water ResistantYes SensorsBarometer, Accelerometer, Proximity, Ambient Light",
+  },
+  {
+    id: 27,
+    rating: 5,
+    reviews: [],
+    price: 95500,
+    countInStock: 4,
+    name: "2020 Apple MacBook Air Laptop",
+    category: "electronics",
+    image:
+      "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    description:
+      "2020 Apple MacBook Air Laptop: Apple M1 Chip, 13' Retina Display, 8GB RAM, 256GB SSD Storage, Backlit Keyboard, FaceTime HD Camera, Touch ID. Works with iPhone/iPad; Gold",
+  },
+];
+
+export default products;
